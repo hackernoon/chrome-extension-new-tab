@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Fancy Title",
+  "version": "1.0",
+  "description": "Fancy description...",
+  "author": "Author Name",
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "storage",
+    "https://api.hackernoon.com/"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "128": "icon128.png"
+  }
+}
