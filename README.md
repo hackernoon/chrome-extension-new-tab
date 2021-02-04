@@ -1,1 +1,1 @@
-Example in the wild: [Tech Stories Tab by Hacker Noon](https://chrome.google.com/webstore/detail/tech-stories-tab-by-hacke/cmcgnandlhnjekeccmongfellpljlohh)
+Example in the wild: [Tech Stories Tab](https://chrome.google.com/webstore/detail/tech-stories-tab-by-hacke/cmcgnandlhnjekeccmongfellpljlohh). And [a Hacker Noon story](https://www.producthunt.com/posts/tech-stories-tab-by-hacker-noon?ref=hackernoon.com) about how it's made.
