@@ -1,3 +1,4 @@
+const APIURL = "https://api.hackernoon.com/featured-stories";
 const storiesDiv = document.querySelector('#stories');
 const storyNode = (story) => {
   var template = document.createElement('template');
@@ -19,17 +20,21 @@ if (localStorage.lastFetch && localStorage.stories && (new Date() - localStorage
   if (localStorage.stories) {
     addStories(JSON.parse(localStorage.stories));
   }
-  fetch('https://api.hackernoon.com/featured-stories',{
-      method: 'GET',
-      mode: 'cors',
-      credentials: 'include'
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (!localStorage.stories) {
-        addStories(data);
-      }
-      localStorage.setItem("stories", JSON.stringify(data));
-      localStorage.setItem("lastFetch", new Date()-1);
-    });
+
+// An asynchronous function to fetch the stories 
+async function fetchStories() {
+  let response = await fetch(APIURL, {
+    method: 'GET',  
+    mode: 'CORS',
+    credentials: 'INCLUDE'
+  });
+  
+    let responseData = await response.json();
+    if (!localStorage.stories) {
+          addStories(responseData);
+        }
+    localStorage.setItem("stories", JSON.stringify(responseData));
+    localStorage.setItem("lastFetch", new Date()-1);
 }
+
+fetchStories();
